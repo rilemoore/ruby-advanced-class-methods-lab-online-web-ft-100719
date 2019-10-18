@@ -30,18 +30,18 @@ class Song
   end
   
   def self.find_by_name(namestring)
-    @@all.each do |song|
-      if(song.name == namestring)
-        return song
-      end
-    end
-    false
+   # @@all.each do |song|
+   #   if(song.name == namestring)
+    #    return song
+     # end
+    #end
+    #false
+    
+    @@all.find{|song| song.name == namestring }
+    
   end
   
   def self.find_or_create_by_name(namestring)
-    
-
-    
     if(self.find_by_name(namestring) == false)
       self.create_by_name(namestring)
     else
