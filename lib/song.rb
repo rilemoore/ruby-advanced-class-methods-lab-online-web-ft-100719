@@ -44,6 +44,11 @@ class Song
         return song
       end
     end
+    song = self.new
+    song.name = namestring
+    @@all << song
+    song
+  end
   
   
 end
