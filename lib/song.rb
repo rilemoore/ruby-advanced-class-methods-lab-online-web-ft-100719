@@ -46,7 +46,6 @@ class Song
       self.find_by_name(namestring)
     end
     
-    
   end
   
   
