@@ -26,5 +26,6 @@ class Song
     song = self.new
     song.name = namestring
     @@all << song
+    song
   end
 end
