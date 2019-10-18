@@ -38,16 +38,15 @@ class Song
     false
   end
   
-  def self.find_or_create_by_name
-    @@all.each do |song|
-      if(song.name == namestring)
-        return song
-      end
+  def self.find_or_create_by_name(namestring)
+    
+    if(self.find_by_name(namestring) == false)
+      self.create_by_name(namestring)
+    else
+      self.find_by_name(namestring)
     end
-    song = self.new
-    song.name = namestring
-    @@all << song
-    song
+    
+    
   end
   
   
