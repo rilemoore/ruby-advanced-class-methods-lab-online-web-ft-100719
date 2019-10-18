@@ -65,6 +65,9 @@ class Song
   
   def self.create_from_filename(filename)
     
+    
+    
+    self.create_by_name(namestring)
   end
   
 end
