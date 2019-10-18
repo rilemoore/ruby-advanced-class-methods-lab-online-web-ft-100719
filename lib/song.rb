@@ -39,7 +39,11 @@ class Song
   end
   
   def self.find_or_create_by_name
-    
-  end
+    @@all.each do |song|
+      if(song.name == namestring)
+        return song
+      end
+    end
+  
   
 end
