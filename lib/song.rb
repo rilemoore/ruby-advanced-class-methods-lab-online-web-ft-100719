@@ -40,11 +40,17 @@ class Song
   
   def self.find_or_create_by_name(namestring)
     
-    if(self.find_by_name(namestring) == false)
-      self.create_by_name(namestring)
-    else
-      self.find_by_name(namestring)
+    bool = self.find_by_name(namestring)
+    if(bool != false)
+      return bool
     end
+    self.create_by_name(namestring)
+    
+    #if(self.find_by_name(namestring) == false)
+     # self.create_by_name(namestring)
+  #  else
+   #   self.find_by_name(namestring)
+    #end
     
   end
   
